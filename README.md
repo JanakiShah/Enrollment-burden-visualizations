@@ -4,3 +4,5 @@ The project created vizualizations to determine burden of households on the enro
 
 Programming language used : SAS 9.4
 
+## Plot 1: 2 Program burden
+![Alt Text](Picture1.png)
