@@ -13,3 +13,6 @@ Programming language used : SAS 9.4
 
 ## Plot 3: 3 Program burden
 ![Alt Text](Plot3.png)
+
+## Plot 4: 4 Program burden
+![Alt Text](Plot4.png)
