@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_odsexcel_perprogram",
+  "source_file": "enrollment_AdminBurden_viz.sas",
+  "source_blob_sha": "b720626f214f5ed51c211849acb089dc27c5d2ff",
+  "source_commit": "9ca53d551dffea99cc3a3a0f2506d73a7dca60c1",
+  "notes": "The per-program ODS EXCEL export: four PROC SUMMARY/PROC SQL/DATA-step summaries (one per benefit program) feeding an ODS EXCEL destination with the author's own sheet options, per-plot titles carrying the author's own household counts, and custom fillattrs colors per program. In the original file the four summary DATA/PROC steps physically follow the ODS EXCEL block that consumes their output (onecombo_M/S/T/W); this bundle reorders those statements ahead of the ODS EXCEL block so the referenced datasets exist when needed -- a pure reordering, no logic changed -- and points ODS EXCEL FILE= at a relative ./output path instead of the original UNC share. AN.coenrollim_us mocked with the same 24-row inline DATALINES set as t001 (one-program-missing groups). Logic, PROC options, titles, and colors are unmodified from the author's script."
+}

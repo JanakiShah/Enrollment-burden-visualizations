@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_onecombo_burden",
+  "source_file": "enrollment_AdminBurden_viz.sas",
+  "source_blob_sha": "b720626f214f5ed51c211849acb089dc27c5d2ff",
+  "source_commit": "9ca53d551dffea99cc3a3a0f2506d73a7dca60c1",
+  "notes": "PROC FORMAT catalog (12 formats) plus the 'one program missing' pipeline: PROC FREQ crosstabs, PROC SUMMARY/MEANS with CLASS+PRELOADFMT+COMPLETETYPES, PROC SQL summary aggregation, a DATA step consolidating four mutually-exclusive burden columns into one PROGRAM/BURDEN pair, and two PROC SGPLOT calls (HBAR stat=sum and a stacked HBARPARM). AN.coenrollim_us (originally a UNC network share dataset) replaced with a 24-row inline DATALINES mock covering all four one-program-missing groups (benefit_ct 111/1011/1101/1110) with burden codes 1-4, matching the shape the script reads. Logic, PROC options, and format definitions are unmodified from the author's script."
+}

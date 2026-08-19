@@ -1,0 +1,62 @@
+NOTE: Option OBS changed to 100.
+NOTE: Library AN assigned path=/tmp/work/r_881802c12a1145feb8f8f9bb7acf717f/work/7e3a08e1-79c0-4a1d-8350-11d961daada4.
+NOTE: DATA AN.coenrollim_us
+
+NOTE: Processing inline DATALINES (24 lines)
+
+NOTE: Read 24 rows from DATALINES.
+NOTE: Wrote AN.coenrollim_us (24 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FORMAT library=WORK
+
+NOTE: FORMAT yn01f defined (2 ranges).
+NOTE: FORMAT statusf defined (2 ranges).
+NOTE: FORMAT evictionstatusf defined (3 ranges).
+NOTE: FORMAT energy4f defined (4 ranges).
+NOTE: FORMAT snap4f defined (6 ranges).
+NOTE: FORMAT wel4f defined (7 ranges).
+NOTE: FORMAT wic6f defined (6 ranges).
+NOTE: FORMAT childinsuraf defined (3 ranges).
+NOTE: FORMAT coenrollsf defined (5 ranges).
+NOTE: FORMAT coinsuraf defined (2 ranges).
+NOTE: FORMAT finalf defined (4 ranges).
+NOTE: FORMAT gap4f defined (4 ranges).
+NOTE: DATA temp_im1
+
+
+NOTE: Read 24 rows from AN.coenrollim_us.
+NOTE: Wrote temp_im1 (24 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC MEANS
+WARNING: PRELOADFMT was specified for class variable mcb_4 but no format is associated with it; PRELOADFMT is ignored.
+WARNING: PRELOADFMT was specified for class variable snapb_4 but no format is associated with it; PRELOADFMT is ignored.
+WARNING: PRELOADFMT was specified for class variable tanfb_4 but no format is associated with it; PRELOADFMT is ignored.
+WARNING: PRELOADFMT was specified for class variable wicb_4 but no format is associated with it; PRELOADFMT is ignored.
+NOTE: Output dataset countsone0 has 240 observations and 36 variables.
+NOTE: PROC MEANS statement used.
+NOTE: PROC SQL 
+
+NOTE: Table countsone1 created.
+NOTE: PROC SQL statement used.
+NOTE: DATA onecombo
+
+
+NOTE: Read 100 rows from countsone1.
+NOTE: Wrote onecombo (100 rows, 40 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SGPLOT data=onecombo
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg
+NOTE: PROC SGPLOT data=onecombo
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot1.svg

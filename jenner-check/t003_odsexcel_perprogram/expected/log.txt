@@ -1,0 +1,100 @@
+NOTE: Option OBS changed to 100.
+NOTE: Library AN assigned path=/tmp/work/r_6c4a2b604e5b4b3eb03683dd4130b034/work/61c508e9-d24c-48bc-810d-9a384e82a8be.
+NOTE: DATA AN.coenrollim_us
+
+NOTE: Processing inline DATALINES (24 lines)
+
+NOTE: Read 24 rows from DATALINES.
+NOTE: Wrote AN.coenrollim_us (24 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FORMAT library=WORK
+
+NOTE: FORMAT finalf defined (4 ranges).
+NOTE: DATA temp_im1
+
+
+NOTE: Read 24 rows from AN.coenrollim_us.
+NOTE: Wrote temp_im1 (24 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC MEANS
+WARNING: PRELOADFMT was specified for class variable mcb_4 but no format is associated with it; PRELOADFMT is ignored.
+NOTE: Output dataset countsone0_M has 3 observations and 48 variables.
+NOTE: PROC MEANS statement used.
+NOTE: PROC MEANS
+WARNING: PRELOADFMT was specified for class variable snapb_4 but no format is associated with it; PRELOADFMT is ignored.
+NOTE: Output dataset countsone0_S has 2 observations and 48 variables.
+NOTE: PROC MEANS statement used.
+NOTE: PROC MEANS
+WARNING: PRELOADFMT was specified for class variable tanfb_4 but no format is associated with it; PRELOADFMT is ignored.
+NOTE: Output dataset countsone0_T has 3 observations and 48 variables.
+NOTE: PROC MEANS statement used.
+NOTE: PROC MEANS
+WARNING: PRELOADFMT was specified for class variable wicb_4 but no format is associated with it; PRELOADFMT is ignored.
+NOTE: Output dataset countsone0_W has 4 observations and 48 variables.
+NOTE: PROC MEANS statement used.
+NOTE: PROC SQL 
+
+NOTE: Table countsone1_M created.
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Table countsone1_S created.
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Table countsone1_T created.
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: Table countsone1_W created.
+NOTE: PROC SQL statement used.
+NOTE: DATA onecombo_M
+
+
+NOTE: Read 3 rows from countsone1_M.
+NOTE: Wrote onecombo_M (3 rows, 51 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA onecombo_S
+
+
+NOTE: Read 2 rows from countsone1_S.
+NOTE: Wrote onecombo_S (2 rows, 51 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA onecombo_T
+
+
+NOTE: Read 3 rows from countsone1_T.
+NOTE: Wrote onecombo_T (3 rows, 51 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA onecombo_W
+
+
+NOTE: Read 4 rows from countsone1_W.
+NOTE: Wrote onecombo_W (4 rows, 51 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS Graphics is ON (width=440px, height=300px, format=SVG).
+NOTE: PROC SGPLOT data=onecombo_M
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg
+NOTE: PROC SGPLOT data=onecombo_S
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot1.svg
+NOTE: PROC SGPLOT data=onecombo_T
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot2.svg
+NOTE: PROC SGPLOT data=onecombo_W
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot3.svg
+NOTE: ODS EXCEL: wrote workbook to /tmp/work/r_6c4a2b604e5b4b3eb03683dd4130b034/output/Administrative_Burden_DataViz.xlsx.
