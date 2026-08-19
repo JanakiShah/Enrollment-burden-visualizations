@@ -1,11 +1,47 @@
 /* Adapted from enrollment_AdminBurden_viz.sas (JanakiShah/Enrollment-burden-visualizations)
    Original reads AN.coenrollim_us from a UNC network share (\\Dept\ChildrensHealthWatch\...).
-   Here that source is replaced with a small inline mock dataset (mock_coenroll, in autoexec.sas),
+   Here that source is replaced with a small inline mock dataset (built below with DATALINES),
    shaped like the real one, covering the six "two programs missing" benefit_ct groups the author
    defined (11, 101, 110, 1001, 1010, 1100). Everything downstream -- the burdf/burd_label2f
    formats, the PROC SUMMARY/PROC SQL aggregation, and the DATA step building the two-letter
    burden-combination code (LL/LC/LP/... via CATX + cascading IF/ELSE IF) and the final
-   PROC SGPLOT -- is the author's own code, unmodified except for the swapped data source. */
+   PROC SGPLOT -- is the author's own code, unmodified except for the swapped data source.
+   All values below are fabricated -- no real household or study data. */
+
+/**************************************/
+/*	   mock AN.coenrollim_us		  */
+/**************************************/
+data AN_coenrollim_us;
+  infile datalines dsd dlm=' ' missover;
+  input hh_id likelyeligibletanf _imputation_ benefit_ct
+        mcb_4 snapb_4 tanfb_4 wicb_4 coenroll_sum gap;
+  datalines;
+2000 1 10 11 3 2 . . 2 1
+2001 1 10 11 4 1 . . 2 1
+2002 1 10 11 1 1 . . 2 1
+2003 1 10 11 3 1 . . 2 1
+2004 1 10 101 2 . 1 . 2 1
+2005 1 10 101 1 . 4 . 2 1
+2006 1 10 101 4 . 1 . 2 1
+2007 1 10 101 2 . 1 . 2 1
+2008 1 10 110 4 . . 1 2 1
+2009 1 10 110 1 . . 2 2 1
+2010 1 10 110 1 . . 4 2 1
+2011 1 10 110 1 . . 2 2 1
+2012 1 10 1001 . 1 2 . 2 1
+2013 1 10 1001 . 3 4 . 2 1
+2014 1 10 1001 . 2 1 . 2 1
+2015 1 10 1001 . 3 2 . 2 1
+2016 1 10 1010 . 1 . 2 2 1
+2017 1 10 1010 . 3 . 1 2 1
+2018 1 10 1010 . 1 . 1 2 1
+2019 1 10 1010 . 2 . 4 2 1
+2020 1 10 1100 . . 4 3 2 1
+2021 1 10 1100 . . 4 4 2 1
+2022 1 10 1100 . . 3 3 2 1
+2023 1 10 1100 . . 2 2 2 1
+;
+run;
 
 /**************************************/
 /*				FORMATS			   	  */
@@ -37,7 +73,7 @@ run;
 
 /* subset one imputation for developing code */
 data temp_im1;
-set AN.coenrollim_us;
+set AN_coenrollim_us;
 where likelyeligibletanf=1 and _imputation_=10;
 run;
 

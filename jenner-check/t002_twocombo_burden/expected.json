@@ -1,11 +1,12 @@
 {
-  "_captured_at": "2026-08-19T16:30:00Z",
-  "_captured_run_id": "r_0102f27297f8478f98c3fd28949ac6cb",
+  "_captured_at": "2026-08-19T16:50:00Z",
+  "_captured_run_id": "r_f64c3e539e1f4b299a761de2f05a4183",
   "status": "ok",
   "exit_code": 1,
   "log_contains": [
-    "NOTE: Wrote AN.coenrollim_us (24 rows, 10 columns).",
+    "NOTE: Wrote AN_coenrollim_us (24 rows, 10 columns).",
     "NOTE: Wrote temp_im1 (24 rows, 10 columns).",
+    "NOTE: Output dataset countstwo0 has 500 observations and 36 variables.",
     "NOTE: Table countstwo1 created.",
     "NOTE: Wrote twocombo (100 rows, 45 columns).",
     "NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg"
