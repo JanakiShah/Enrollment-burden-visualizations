@@ -1,0 +1,49 @@
+NOTE: Option OBS changed to 100.
+NOTE: Library AN assigned path=/tmp/work/r_0102f27297f8478f98c3fd28949ac6cb/work/cf759b89-74bb-4faf-a451-bc5e36201860.
+NOTE: DATA AN.coenrollim_us
+
+NOTE: Processing inline DATALINES (24 lines)
+
+NOTE: Read 24 rows from DATALINES.
+NOTE: Wrote AN.coenrollim_us (24 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FORMAT library=WORK
+
+NOTE: FORMAT burdf defined (4 ranges).
+NOTE: FORMAT burd_label2f defined (10 ranges).
+NOTE: DATA temp_im1
+
+
+NOTE: Read 24 rows from AN.coenrollim_us.
+NOTE: Wrote temp_im1 (24 rows, 10 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC MEANS
+WARNING: PRELOADFMT was specified for class variable mcb_4 but no format is associated with it; PRELOADFMT is ignored.
+WARNING: PRELOADFMT was specified for class variable snapb_4 but no format is associated with it; PRELOADFMT is ignored.
+WARNING: PRELOADFMT was specified for class variable tanfb_4 but no format is associated with it; PRELOADFMT is ignored.
+WARNING: PRELOADFMT was specified for class variable wicb_4 but no format is associated with it; PRELOADFMT is ignored.
+NOTE: Output dataset countstwo0 has 500 observations and 36 variables.
+NOTE: PROC MEANS statement used.
+NOTE: PROC SQL 
+
+NOTE: Table countstwo1 created.
+NOTE: PROC SQL statement used.
+NOTE: Option MISSING changed to  .
+NOTE: DATA twocombo
+
+
+NOTE: Read 100 rows from countstwo1.
+NOTE: Wrote twocombo (100 rows, 45 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: Option MISSING changed to ..
+NOTE: PROC SGPLOT data=twocombo
+
+NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg

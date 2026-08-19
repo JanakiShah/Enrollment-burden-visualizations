@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_twocombo_burden",
+  "source_file": "enrollment_AdminBurden_viz.sas",
+  "source_blob_sha": "b720626f214f5ed51c211849acb089dc27c5d2ff",
+  "source_commit": "9ca53d551dffea99cc3a3a0f2506d73a7dca60c1",
+  "notes": "The 'two programs missing' pipeline: burdf/burd_label2f format catalog, PROC FREQ crosstabs, PROC SUMMARY with CLASS+PRELOADFMT+COMPLETETYPES, PROC SQL aggregation, and a DATA step building the two-letter burden-combination code (LL/LC/LP/...) via CATX concatenation plus a 10-way cascading IF/ELSE IF, finishing with PROC SGPLOT HBAR stat=sum. AN.coenrollim_us mocked with 24 inline DATALINES rows covering all six two-program-missing benefit_ct groups (11/101/110/1001/1010/1100) with two of the four burden columns populated per row, matching the shape the script reads. Logic, PROC options, and format definitions are unmodified from the author's script."
+}

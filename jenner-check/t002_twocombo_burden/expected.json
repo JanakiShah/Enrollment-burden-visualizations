@@ -1,0 +1,26 @@
+{
+  "_captured_at": "2026-08-19T16:30:00Z",
+  "_captured_run_id": "r_0102f27297f8478f98c3fd28949ac6cb",
+  "status": "ok",
+  "exit_code": 1,
+  "log_contains": [
+    "NOTE: Wrote AN.coenrollim_us (24 rows, 10 columns).",
+    "NOTE: Wrote temp_im1 (24 rows, 10 columns).",
+    "NOTE: Table countstwo1 created.",
+    "NOTE: Wrote twocombo (100 rows, 45 columns).",
+    "NOTE: PROC SGPLOT output written to: ./ods_output/sgplot.svg"
+  ],
+  "log_does_not_contain": [
+    "ERROR:",
+    "[JENNER-ERROR"
+  ],
+  "diagnostics": {
+    "parse_warnings": [],
+    "runtime_warnings": [
+      "PRELOADFMT was specified for class variable mcb_4 but no format is associated with it; PRELOADFMT is ignored.",
+      "PRELOADFMT was specified for class variable snapb_4 but no format is associated with it; PRELOADFMT is ignored.",
+      "PRELOADFMT was specified for class variable tanfb_4 but no format is associated with it; PRELOADFMT is ignored.",
+      "PRELOADFMT was specified for class variable wicb_4 but no format is associated with it; PRELOADFMT is ignored."
+    ]
+  }
+}
